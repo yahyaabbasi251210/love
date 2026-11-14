@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>A little something for you 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffe6ef;--bg2:#ece0ff;--ink:#5b2340;--card:rgba(255,255,255,.66);--rose:#e0457b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2b0f33;--bg2:#1a1040;--ink:#ffe3ee;--card:rgba(255,255,255,.1);--rose:#ff8db4}}
+:root[data-theme="dark"]{--bg:#2b0f33;--bg2:#1a1040;--ink:#ffe3ee;--card:rgba(255,255,255,.1);--rose:#ff8db4}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:linear-gradient(165deg,var(--bg),var(--bg2));color:var(--ink);font:500 17px/1.75 'Playfair Display',Georgia,serif;overflow-x:hidden;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='19' font-size='18'%3E💗%3C/text%3E%3C/svg%3E") 12 12,auto}
+body.lock{overflow:hidden;height:100vh}
+h2{font:700 clamp(30px,8.5vw,52px)/1.15 'Dancing Script',cursive;color:var(--rose);margin:0 0 22px}
+h3{font:700 clamp(22px,6vw,30px)/1.2 'Dancing Script',cursive;margin:0 0 8px}
+section{position:relative;z-index:1;max-width:900px;margin:auto;padding:70px 18px;text-align:center}
+.g{background:var(--card);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.5);border-radius:28px;padding:24px;box-shadow:0 10px 34px rgba(224,69,123,.18)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+button{font:700 19px 'Dancing Script',cursive;color:#fff;background:linear-gradient(135deg,#ff6b9d,#e0457b);border:0;border-radius:40px;padding:13px 24px;cursor:pointer;box-shadow:0 6px 18px rgba(224,69,123,.4);transition:transform .2s}
+button:active{transform:scale(.95)}
+button:focus-visible,[role=button]:focus-visible{outline:3px solid #ff6b9d;outline-offset:3px}
+#fx{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+i,b.pt,b.bp{font-style:normal;font-weight:400}
+.fl{position:absolute;bottom:-40px;opacity:.7;animation:up linear infinite}
+@keyframes up{to{transform:translate(30px,-115vh) rotate(40deg)}}
+.pt{position:fixed;top:-40px;z-index:110;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(50px,112vh) rotate(380deg)}}
+.bp{position:fixed;z-index:120;pointer-events:none;animation:bp 1.2s ease-out forwards}
+@keyframes bp{to{transform:translate(var(--x),var(--y)) scale(.4) rotate(120deg);opacity:0}}
+@keyframes bt{50%{transform:scale(1.07)}}
+#intro{position:fixed;inset:0;z-index:100;display:grid;place-content:center;justify-items:center;text-align:center;padding:calc(20px + env(safe-area-inset-top,0px)) 20px 20px;background:linear-gradient(160deg,#ffd9e6,#e9d8ff);color:#5b2340;transition:opacity 1s,visibility 1s}
+#intro.gone{opacity:0;visibility:hidden}
+#intro h1{font:700 clamp(26px,7.4vw,46px)/1.15 'Dancing Script',cursive;margin:0 0 8px;max-width:640px;color:#d02d68}
+#intro p{margin:0;font-style:italic}
+.fe{position:absolute;font-size:30px;animation:bt 2.6s ease-in-out infinite}
+.env{position:relative;width:240px;height:160px;margin:78px auto 28px;background:#ff9fbe;border-radius:8px;box-shadow:0 16px 34px rgba(224,69,123,.35)}
+.env>*{position:absolute}
+.lt{left:16px;right:16px;top:12px;height:128px;background:#fff;border-radius:6px;z-index:2;display:grid;place-items:center;font:700 26px 'Dancing Script',cursive;color:#e0457b;transition:transform .9s .5s}
+.pk{inset:0;background:linear-gradient(#ffc2d6,#ff8fb3);clip-path:polygon(0 100%,0 36%,50% 68%,100% 36%,100% 100%);z-index:3;border-radius:8px}
+.fp{inset:0;background:#ff7fa8;clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;transition:transform .8s;z-index:4}
+.seal{left:50%;top:44%;transform:translate(-50%,-50%);font-size:34px;z-index:5;transition:opacity .4s;animation:sb 1.6s infinite}
+@keyframes sb{50%{transform:translate(-50%,-50%) scale(1.15)}}
+.open .fp{transform:rotateX(180deg);z-index:1}.open .lt{transform:translateY(-78px)}.open .seal{opacity:0}
+#rg{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+@media(min-width:640px){#rg{grid-template-columns:repeat(4,1fr)}}
+.c{clip-path:url(#hc);aspect-ratio:1/.95;display:grid;place-items:center;padding-bottom:6%;color:#fff;background:radial-gradient(circle at 40% 30%,#ff9ec0,#e0457b);cursor:pointer;animation:bt 2.4s ease-in-out infinite}
+.c span{font:700 30px/1.1 'Dancing Script',cursive}
+.c p{display:none;margin:0;padding:0 21%;font:700 clamp(12px,3.3vw,16px)/1.2 'Dancing Script',cursive}
+.c.on{background:radial-gradient(circle at 40% 30%,#fff,#ffc2d6);color:#8a1f4d;animation:fq .5s}
+.c.on p{display:block}.c.on span{display:none}
+@keyframes fq{from{transform:scaleX(0)}}
+.tx{text-align:left}.tx p{margin:0 0 1em}
+.ill{display:block;width:min(100%,340px);margin:0 auto 18px;animation:bt 3s ease-in-out infinite}
+.bt{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:20px 0}
+#fo{margin-top:14px}#fo h3{color:var(--rose);font-size:clamp(24px,6.4vw,36px)}
+.bh{font-size:80px;line-height:1;animation:bt 1s infinite}
+.tr{animation:dr 1.2s infinite}@keyframes dr{to{transform:translateY(20px);opacity:0}}
+.s{stroke:#5b2340;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+svg text{font-family:'Dancing Script',cursive;font-weight:700;text-anchor:middle}
+#dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.dd{background:repeating-linear-gradient(#fffaf0 0 21px,#dfeaff 21px 22px);border-left:3px solid #ffb3c6;border-radius:6px;padding:8px;box-shadow:0 6px 16px rgba(0,0,0,.14);color:#c0396b;animation:bob 5s ease-in-out infinite alternate}
+.dd:nth-child(odd){--r:-1.5deg}.dd:nth-child(even){--r:1.5deg;animation-delay:-2s}
+@keyframes bob{from{transform:rotate(var(--r)) translateY(0)}to{transform:rotate(var(--r)) translateY(-6px)}}
+.dd svg{width:100%;display:block}.dd b{font:700 21px 'Dancing Script',cursive}
+#wg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){#wg{grid-template-columns:repeat(3,1fr)}}
+.w{min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;font:700 20px/1.25 'Dancing Script',cursive;padding:16px}
+.w i{font-size:36px}
+.k1{animation:k1 .7s}.k2{animation:k2 .8s}.k3{animation:k3 .8s}.k4{animation:k4 .7s}.k5{animation:k5 .6s}.k6{animation:k6 1s}
+@keyframes k1{40%{transform:translateY(-16px)}70%{transform:none}85%{transform:translateY(-6px)}}
+@keyframes k2{to{transform:rotate(360deg)}}
+@keyframes k3{25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+@keyframes k4{50%{transform:scale(1.14)}}
+@keyframes k5{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+@keyframes k6{50%{transform:translateY(-10px);filter:brightness(1.15)}}
+#pg{display:grid;gap:12px}
+@media(min-width:640px){#pg{grid-template-columns:1fr 1fr}}
+.p{display:flex;gap:14px;align-items:center;text-align:left;cursor:pointer}
+.ck{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;animation:gl 2.4s infinite}
+@keyframes gl{50%{box-shadow:0 0 18px 4px rgba(255,107,157,.75)}}
+.ck path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s .3s}.in .ck path{stroke-dashoffset:0}
+.gc{margin:0 0 22px}
+input[type=range]{width:100%;accent-color:#e0457b}
+#sh{font-size:40px;line-height:1.2;transition:font-size .2s}
+#gb{position:relative;height:300px;overflow:hidden;border-radius:20px;background:rgba(255,255,255,.3);margin:12px 0}
+.gh{position:absolute;top:-40px;padding:6px;cursor:pointer;animation:gf linear forwards}
+@keyframes gf{to{transform:translateY(350px)}}
+#sp{font-size:54px;line-height:1;background:none;box-shadow:none;padding:0;animation:bt 1.6s infinite}
+.pop{animation:pp .5s!important}@keyframes pp{50%{transform:scale(1.4) rotate(8deg)}}
+#cp{min-height:3.2em;font:700 26px/1.2 'Dancing Script',cursive;color:var(--rose);margin:8px 0 0}
+.night{max-width:none;background:linear-gradient(#150b3a,#3a1a62 55%,#7a2d6e);color:#fff0f6;overflow:hidden}
+.night:before,.night:after{content:"";position:absolute;inset:0;pointer-events:none}
+.night:before{background:radial-gradient(1.5px 1.5px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 90px 120px,#fff,transparent),radial-gradient(2px 2px at 150px 70px,#ffd6e8,transparent) 0 0/180px 160px}
+.night:after{background:radial-gradient(1.5px 1.5px at 60px 90px,#fff,transparent),radial-gradient(2px 2px at 130px 20px,#fff,transparent) 0 0/240px 200px;animation:tw 3s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.2}}
+.in2{position:relative;z-index:1;max-width:720px;margin:auto}.night h2{color:#ffc2dc}.night p{margin:0 0 1.1em}
+.moon{width:92px;height:92px;border-radius:50%;margin:0 auto 22px;background:radial-gradient(circle at 35% 35%,#fffbe8,#ffe9a8 60%,#f4cf86);box-shadow:0 0 44px 14px rgba(255,236,170,.45)}
+.big{font-size:clamp(20px,5.4vw,28px);padding:18px 34px;background:linear-gradient(135deg,#ff6b9d,#c44bff);box-shadow:0 0 28px #ff6b9d;animation:bt 1.8s infinite}
+.mini{font-size:16px;padding:6px 14px;background:rgba(255,255,255,.16);box-shadow:none;opacity:.85}
+.night .g{background:rgba(255,255,255,.12);color:#fff0f6;margin-top:16px}
+#mu{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:30px;background:var(--card);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(224,69,123,.3)}
+#pl{padding:6px 12px;font-size:20px}#vl{width:76px}
+#fin{position:fixed;inset:0;z-index:130;display:none;place-content:center;justify-items:center;text-align:center;padding:24px;background:rgba(40,10,60,.85);color:#fff0f6}
+#fin.on{display:grid}#fin h3{font-size:clamp(24px,6.5vw,38px);max-width:520px}
+.jp{animation:k1 1s infinite}
+@media(prefers-reduced-motion:reduce){*,:before,:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style></head>
+<body class="lock">
+<svg width="0" height="0" style="position:absolute"><defs>
+<clipPath id="hc" clipPathUnits="objectBoundingBox"><path d="M.5 .96C.1 .66 0 .42 .1 .22 .22 .02 .44 .08 .5 .27 .56 .08 .78 .02 .9 .22 1 .42 .9 .66 .5 .96z"/></clipPath>
+<g id="fc"><circle cx="15.5" cy="18" r="1.3" fill="#5b2340"/><circle cx="24.5" cy="18" r="1.3" fill="#5b2340"/><circle cx="11.5" cy="22" r="2.2" fill="#ffb3c6"/><circle cx="28.5" cy="22" r="2.2" fill="#ffb3c6"/><path class="s" fill="none" d="M16 23q4 3 8 0"/></g>
+<symbol id="b" viewBox="0 0 40 70"><path class="s" fill="#a9d6ff" d="M7 69V46q0-13 13-13t13 13v23z"/><circle class="s" cx="20" cy="17" r="12" fill="#fff0e6"/><path fill="#7a4a35" d="M8 15Q9 3 20 4t12 11Q20 8 8 15z"/><use href="#fc"/></symbol>
+<symbol id="g" viewBox="0 0 40 70"><path class="s" fill="#ffc2d6" d="M5 69l7-30q8-7 16 0l7 30z"/><circle fill="#5a3320" cx="9" cy="6" r="4.5"/><circle fill="#5a3320" cx="31" cy="6" r="4.5"/><circle class="s" cx="20" cy="17" r="12" fill="#fff0e6"/><path fill="#5a3320" d="M8 17Q8 3 20 3t12 14Q30 8 20 8T8 17z"/><use href="#fc"/></symbol>
+<symbol id="t" viewBox="0 0 60 64"><circle class="s" cx="14" cy="12" r="8" fill="#c98f63"/><circle class="s" cx="46" cy="12" r="8" fill="#c98f63"/><path class="s" fill="#d9a577" d="M12 62q-2-16 18-16t18 16z"/><circle class="s" cx="30" cy="28" r="20" fill="#d9a577"/><ellipse class="s" cx="30" cy="35" rx="9" ry="7" fill="#f6dcc0"/><circle cx="30" cy="32" r="2.5" fill="#5b2340"/><circle cx="22" cy="24" r="2" fill="#5b2340"/><circle cx="38" cy="24" r="2" fill="#5b2340"/></symbol>
+</defs></svg>
+<div id="fx"></div>
+<div id="intro">
+<span class="fe" style="left:9%;top:12%">🌸</span><span class="fe" style="right:11%;top:16%;animation-delay:-1s">✨</span><span class="fe" style="left:12%;bottom:12%;animation-delay:-2s">🌷</span><span class="fe" style="right:9%;bottom:14%;animation-delay:-.5s">💗</span>
+<h1>HEY MY PRETTIEST GIRL IN THE WHOLE WORLD 🥺💗</h1>
+<p>Your silly boy has made something special just for you...</p>
+<div class="env"><div class="lt">for you 💗</div><div class="pk"></div><div class="fp"></div><div class="seal">💗</div></div>
+<button id="op">OPEN MY HEART 💌</button>
+</div>
+<main>
+<section id="hi"><p class="g rv">Before anything else, I just want you to know that you are so incredibly special to me. I hope this little corner of the internet makes you smile, because that smile is one of my favorite things in this entire world.</p></section>
+<section><h2 class="rv">MY LOVE, I’M SO SORRYYYY 🥺❤️</h2>
+<div class="g tx rv">
+<p>My love, I’m so sorry for making you upset. Of all the things in this world, your sadness is the one thing I never, ever want to cause. Your feelings matter to me more than you realize, and you deserve to hear that loud and clear.</p>
+<p>I wish I could sit right in front of you, look into your eyes, and say sorry with everything I have. Since I can’t, I made you this little corner of the internet, where every heart and every word is my way of reaching you.</p>
+<p>I know that saying sorry isn’t enough on its own. I want to show my love through my actions: to be more patient, more understanding, and more thoughtful every single day. You deserve to be treated like a princess, and I want to be the one who makes you feel it.</p>
+<p>Baby, if I could wrap all my love into one giant gift and send it straight to you, I would do it a million times. I never want you to feel alone when you have me. I want to be your comfort, your happiness, and your safest little place.</p>
+<p>You’re not just someone I love. You’re someone whose smile I genuinely want to protect. Your happiness and your peace mean the world to me, and I love you on the easy days and on the days when finding the right words feels hard.</p>
+</div></section>
+<section><h2 class="rv">12 MILLION REASONS WHY I LOVE MY GIRLLLL 💗</h2><p>Tap a heart 💞</p><div id="rg" class="rv"></div></section>
+<section><h2 class="rv">CAN YOUR SILLY BOY GET A LITTLE FORGIVENESS? 🥺</h2><div id="il"></div>
+<p class="g rv">I know I cannot fix everything with a few sweet words, but I promise my apology comes straight from my heart. I don’t want you to feel pressured. Take all the time you need, my love. I just want to keep showing you how much you mean to me.</p>
+<div class="bt"><button data-f="1">I FORGIVE YOU ❤️</button><button data-f="2">I NEED CHOCOLATE FIRST 🍫</button><button data-f="3">I’M STILL MAD 🙄</button></div>
+<div id="fo" class="g" hidden></div></section>
+<section><h2 class="rv">Cute doodles of us 🎀</h2><div id="dg" class="rv"></div></section>
+<section><h2 class="rv">IF I WERE WITH YOU RIGHT NOW... 🥹</h2><div id="wg" class="rv"></div></section>
+<section><h2 class="rv">A FEW LITTLE PROMISES FROM MY HEART</h2><div id="pg"></div></section>
+<section><h2 class="rv">Little love games 🎮</h2>
+<div class="g gc rv"><h3>How much do you love me?</h3><div id="sh">💗</div><input id="sl" type="range" min="0" max="100" value="10" aria-label="How much do you love me"><p id="sm">Slide it and see 💞</p></div>
+<div class="g gc rv"><h3>Catch my hearts</h3><p>Score: <b id="gs">0</b> <span id="gm"></span></p><div id="gb"></div><button id="gg">Start 🎀</button></div>
+<div class="g gc rv"><h3>Tap for a surprise</h3><button id="sp" aria-label="Surprise">💝</button><p id="cp">Tap the heart 💗</p></div></section>
+<section class="night"><div class="in2"><div class="moon"></div><h2 class="rv">ONE LAST THING, MY PRINCESS... ❤️</h2>
+<div class="rv"><p>My sweetest girl, I wish I could be beside you right now, look into your eyes, and tell you how sorry I am. I wish I could see that beautiful smile of yours and know that your heart feels a little lighter.</p>
+<p>You mean so much to me, more than I can ever explain in a thousand paragraphs. I want to keep making you happy, keep giving you reasons to smile, and keep reminding you how precious you are.</p>
+<p>I know I’m not perfect, but my love for you is genuine. I want to keep growing, keep understanding you, and keep becoming someone who makes you feel cherished.</p>
+<p>So here’s one big apology, one million flowers, endless sweet words, and all the love my little heart can possibly give.</p>
+<p><b>I LOVE YOU SOOOOO MUCH, MY PRINCESS. 🥺❤️</b></p></div>
+<button id="fb" class="big">ONE LAST SMILE, PLEASE? 🥹</button>
+<p style="margin-top:40px"><button id="sx" class="mini">PSST... A LITTLE SECRET 🤫</button></p>
+<div id="sk" class="g" hidden>Hey you, adorable little human. I owe you the biggest bouquet, a thousand love notes, and unlimited chocolate. You’re my favorite girl, my prettiest blessing, and someone I want to keep making smile. I LOVE YOUUU! ❤️</div></div></section>
+</main>
+<div id="mu"><button id="pl" aria-label="Play or pause music">🎵</button><input id="vl" type="range" min="0" max="100" value="50" aria-label="Volume"></div>
+<div id="fin"><div id="fa"></div><h3>YOU’VE JUST RECEIVED 1,000,000 LOVE NOTES FROM YOUR SILLY BOYYYY! ❤️</h3><button id="fc2">Back to the stars ✨</button></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=Math.random,E=(h,c,t)=>{const e=document.createElement(h);e.className=c;e.textContent=t;return e},H=['💗','❤️','💖','🌸','✨'];
+const bp=(x,y,e,n,d=140)=>{for(let i=0;i<n;i++){const s=E('b','bp',e[i%e.length]),a=R()*6.28,m=30+R()*d;s.style.cssText=`left:${x}px;top:${y}px;--x:${Math.cos(a)*m}px;--y:${Math.sin(a)*m-30}px;font-size:${14+R()*18}px`;document.body.append(s);setTimeout(()=>s.remove(),1300)}},
+at=(el,e,n)=>{const r=el.getBoundingClientRect();bp(r.left+r.width/2,r.top+r.height/2,e,n)},
+rain=(e,n)=>{for(let i=0;i<n;i++){const s=E('b','pt',e[i%e.length]);s.style.cssText=`left:${R()*100}vw;font-size:${16+R()*16}px;animation-duration:${4+R()*4}s;animation-delay:${R()*2}s`;document.body.append(s);setTimeout(()=>s.remove(),10500)}};
+for(let i=0;i<14;i++){const s=E('i','fl',['💗','🌸','✨','🌷','💕'][i%5]);s.style.cssText=`left:${R()*96}vw;font-size:${14+R()*18}px;animation-duration:${9+R()*9}s;animation-delay:-${R()*14}s`;$('#fx').append(s)}
+const U=(h,x,y,s=1)=>`<use href="#${h}" x="${x}" y="${y}" width="${28*s}" height="${49*s}"/>`,B=(x,y,s)=>U('b',x,y,s),G=(x,y,s)=>U('g',x,y,s),
+T=(x,y,t,z=18,a='')=>`<text x="${x}" y="${y}" font-size="${z}" ${a}>${t}</text>`,
+K=(x,y,k)=>`<path class="s" fill="#ff6b9d" transform="translate(${x} ${y}) scale(${k})" d="M0 8C-10-6-24 6-12 18L0 28 12 18C24 6 10-6 0 8z"/>`;
+const go=()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(e=>io.observe(e))};
+$('#op').onclick=function(){this.disabled=true;const v=$('.env');v.classList.add('open');const r=v.getBoundingClientRect();bp(r.left+r.width/2,r.top+30,H,30,220);setTimeout(()=>{$('#intro').classList.add('gone');document.body.classList.remove('lock');scrollTo(0,0);go();rain(['🌸'],12)},1900)};
+document.onkeydown=e=>{if(e.key=='Enter'&&e.target.matches('[role=button]'))e.target.click()};
+const RS=['Your smile makes my entire day.','Your laugh is my favorite sound.','You’re my prettiest distraction.','Your little habits are adorable.','Talking to you makes everything better.','You’re beautiful even when you don’t realize it.','You make ordinary moments feel magical.','Your happiness means everything to me.','I love your cute little personality.','You’re my favorite notification.','I want to make countless beautiful memories with you.','Simply because you’re YOU, my princess.'];
+$('#rg').innerHTML=RS.map((t,i)=>`<div class="c" tabindex="0" role="button" style="animation-delay:${i*.15}s"><span>${i+1}<br>💗</span><p>${t}</p></div>`).join('');
+$$('.c').forEach(c=>c.onclick=()=>{c.classList.toggle('on');at(c,H,8)});
+$('#il').innerHTML='<svg class="ill" viewBox="0 0 200 130">'+B(12,40,1.1)+T(62,72,'💐',22)+K(100,26,1.9)+T(100,66,'sorry',13,'fill="#fff"')+G(152,40,1.1)+'</svg>';
+$$('[data-f]').forEach(b=>b.onclick=()=>{const k=b.dataset.f,o=$('#fo');o.hidden=false;o.innerHTML=[0,
+'<div class="bh">💖</div><h3>THANK YOU, MY PRINCESS! I LOVE YOUUU!</h3>',
+'<svg class="ill" viewBox="0 0 120 80">'+B(26,22)+G(66,22)+T(60,16,'🍫',18)+'</svg><h3>ON IT! SENDING YOU 10,000 CHOCOLATES! 🍫</h3>',
+'<svg class="ill" viewBox="0 0 100 100" style="width:200px"><use href="#t" x="22" y="14" width="56" height="60"/><path class="s" fill="none" d="M44 56q6-5 12 0"/><circle class="tr" cx="42" cy="42" r="3" fill="#7fc8ff"/><circle class="tr" cx="58" cy="42" r="3" fill="#7fc8ff" style="animation-delay:.5s"/></svg><h3>OKAY BABY, I’LL WAIT WITH FLOWERS 🥺🌷</h3>'][k];
+if(k==1)bp(innerWidth/2,innerHeight/2,H,48,Math.min(innerWidth,520));if(k==2)rain(['🍫','🍬','⭐'],18);if(k==3)rain(['🌷','🌹','🌸'],14);
+o.scrollIntoView({behavior:'smooth',block:'center'})});
+const D=[['for you, always',B(16,60,.75)+T(58,90,'🌷',22)+G(102,36)],
+['SORRYYYY',B(14,40)+K(110,28,2.3)+T(110,72,'SORRYYYY',10,'fill="#fff"')],
+['a sky full of hearts',B(48,62,.9)+G(84,62,.9)+T(30,30,'💗',13)+T(72,18,'💕',16)+T(122,32,'💗',13)+T(100,50,'💖',10)],
+['picked just for you',B(24,42)+T(68,72,'💐',24)+G(104,42)],
+['hand in hand',B(38,42)+G(90,42)+'<path class="s" fill="none" d="M66 84q12 8 26 0"/>'],
+['under the moon',B(44,60,.9)+G(80,60,.9)+T(112,38,'🌙',28)+T(28,28,'✨',12)+T(66,16,'⭐',11)+T(132,70,'✨',11)],
+['I’ll hold the umbrella',B(48,62,.9)+G(84,62,.9)+'<path class="s" fill="#ffb3c6" d="M28 56Q80-4 132 56Q106 46 80 56Q54 46 28 56z"/><path class="s" fill="none" d="M80 54v10"/>'+T(36,86,'💧',9)+T(124,84,'💧',9)],
+['please smile','<rect class="s" x="30" y="6" width="100" height="30" rx="5" fill="#fff"/>'+T(80,27,'PLEASE SMILE',13,'fill="#e0457b"')+'<path class="s" fill="none" d="M80 36v12"/><use href="#t" x="52" y="46" width="56" height="60"/><path class="s" fill="none" d="M74 86q6 5 12 0"/>']];
+$('#dg').innerHTML=D.map(d=>`<div class="dd"><svg viewBox="0 0 160 120">${d[1]}</svg><b>${d[0]}</b></div>`).join('');
+const W=[['🍫','Show up with your favorite snacks','Snacks first, then every one of your favorite things.'],['💌','Write you a thousand tiny love notes','A thousand notes, and every single one says: I love you.'],['🫶','Hold your hand and never let go','Hand in hand, wherever you want to go.'],['🌷','Give you your favorite flowers','Your favorite flowers, picked just for you.'],['😂','Make you laugh until your cheeks hurt','Silly faces and silly jokes until your cheeks hurt!'],['🌙','Stay under the stars with you until you fall asleep','Under the stars until your eyes get sleepy. Goodnight, princess.']];
+$('#wg').innerHTML=W.map(w=>`<div class="w g" tabindex="0" role="button"><i>${w[0]}</i><span>${w[1]}</span></div>`).join('');
+$$('.w').forEach((c,i)=>c.onclick=()=>{c.className='w g';void c.offsetWidth;c.classList.add('k'+(i+1));c.lastChild.textContent=W[i][2];at(c,[W[i][0],'💗','✨'],10)});
+const P=['I promise to listen to you with patience.','I promise to respect your feelings.','I promise to communicate with kindness.','I promise to appreciate the little things about you.','I promise to make time for you.','I promise to make you feel special.','I promise to show my love through actions.','I promise to keep learning how to love you better.'];
+$('#pg').innerHTML=P.map(t=>`<div class="p g rv" tabindex="0" role="button"><svg class="ck" viewBox="0 0 24 24"><path pathLength="1" d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#e0457b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${t}</span></div>`).join('');
+$$('.p').forEach(p=>p.onclick=()=>at(p.firstChild,H,8));
+const sl=$('#sl'),sh=$('#sh'),sm=$('#sm');sl.oninput=()=>{const v=+sl.value;sh.style.fontSize=36+v*.7+'px';sm.textContent=v<100?['Just a little 🤏','Growing… 🌱','Lots and lots 💞','So so much 💗'][v/25|0]:'NOT AS MUCH AS I LOVE YOUUU! 😭❤️';if(v==100)at(sh,H,26)};
+let gi,sc=0;const gb=$('#gb'),gs=$('#gs'),gm=$('#gm'),M=['You’re my sunshine ☀️','I adore you 💕','My heart is all yours 💖','Your smile is my favorite view 🌷','You’re my whole world 🌍','Forever your biggest fan ⭐'];
+$('#gg').onclick=function(){if(gi){clearInterval(gi);gi=0;this.textContent='Play again 🎀';gb.innerHTML='';return}sc=0;gs.textContent=0;gm.textContent='';this.textContent='Pause ⏸';
+gi=setInterval(()=>{const h=E('b','gh','💗');h.style.cssText=`left:${R()*84}%;animation-duration:${3+R()*2}s;font-size:${26+R()*14}px`;h.onpointerdown=e=>{e.preventDefault();h.remove();gs.textContent=++sc;gm.textContent=M[sc%M.length];bp(e.clientX,e.clientY,['💖','✨'],8,70)};h.onanimationend=()=>h.remove();gb.append(h)},750)};
+const C=['You’re literally my favorite person.','Your smile deserves its own universe.','I LOVE YOU, YOU CUTIE!','Sending you a million love notes.','My princess deserves all the flowers.','You’re the prettiest part of my day.','Even the stars are jealous of you.'];let ci=-1;
+$('#sp').onclick=function(){let n;do n=R()*C.length|0;while(n==ci);ci=n;$('#cp').textContent=C[n];at(this,H,14);this.classList.remove('pop');void this.offsetWidth;this.classList.add('pop')};
+$('#fb').onclick=()=>{$('#fa').innerHTML='<svg class="ill" viewBox="0 0 90 70" style="width:min(70vw,260px)"><g class="jp">'+B(10,10)+'</g><g class="jp" style="animation-delay:.3s">'+G(52,10)+'</g>'+T(45,10,'💖',14)+'</svg>';$('#fin').classList.add('on');bp(innerWidth/2,innerHeight/2,H,70,Math.min(innerWidth,700));rain(['🌸','🌹','💗'],26)};
+$('#fc2').onclick=()=>$('#fin').classList.remove('on');
+$('#sx').onclick=function(){const s=$('#sk');s.hidden=false;at(this,['✨','💗'],10);s.scrollIntoView({behavior:'smooth',block:'center'})};
+let ac,mg,mt,ms=0;const ML=[659,784,880,784,659,587,523,587,659,784,1047,880,784,659,587,523],
+nt=(f,t,d,v)=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(mg);o.start(t);o.stop(t+d)};
+$('#pl').onclick=function(){try{if(mt){clearInterval(mt);mt=0;this.textContent='🎵';return}ac=ac||new(window.AudioContext||window.webkitAudioContext)();if(!mg){mg=ac.createGain();mg.connect(ac.destination);mg.gain.value=$('#vl').value/100}ac.resume();this.textContent='⏸';mt=setInterval(()=>{const t=ac.currentTime+.05;nt(ML[ms%16],t,1.2,.25);if(ms%4==0)nt(ms%8?196:131,t,2,.3);ms++},480)}catch(e){}};
+$('#vl').oninput=e=>{if(mg)mg.gain.value=e.target.value/100};
+</script></body></html>
